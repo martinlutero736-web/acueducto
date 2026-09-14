@@ -283,8 +283,8 @@ function continuarConsulta() {
 
         <select>
             <option>Seleccione su Tipo de Documento</option>
-            <option>Cédula de ciudadanía — DEMO</option>
-            <option>Cédula de extranjería — DEMO</option>
+            <option>Cédula de ciudadanía </option>
+            <option>Cédula de extranjería </option>
         </select>
     </div>
 

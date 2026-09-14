@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pago de demostración</title>
+    <title>Pago de Factura</title>
 
     <link rel="stylesheet" href="estilos.css">
 </head>
@@ -58,50 +59,79 @@
 
             <p class="texto-qr">
                 Escanea el siguiente código QR para realizar el
-                pago de demostración.
+                pago.
             </p>
 
             <div class="qr-contenedor">
 
-                <img src="qr.png" alt="Código QR de demostración">
+                <img src="qr.png" alt="Código QR de PAGO">
 
             </div>
 
             <div class="nota-demo">
-                Este código QR es únicamente para demostración.
-                No corresponde a un pago real.
+                Este código QR es únicamente para el pago de la factura.
             </div>
+            <button class="boton-pago-realizado" onclick="mostrarConfirmacion()">
+                Ya realicé el pago
+            </button>
 
         </div>
 
     </div>
 
 
-<script>
+    <script>
 
-    const datosPago = JSON.parse(
-        sessionStorage.getItem("datosPagoDemo")
-    );
+        const datosPago = JSON.parse(
+            sessionStorage.getItem("datosPagoDemo")
+        );
 
-    if (datosPago) {
+        if (datosPago) {
 
-        document.getElementById("bancoMostrar").textContent =
-            datosPago.banco;
+            document.getElementById("bancoMostrar").textContent =
+                datosPago.banco;
 
-        document.getElementById("valorMostrar").textContent =
-            datosPago.total;
-    }
+            document.getElementById("valorMostrar").textContent =
+                datosPago.total;
+        }
 
 
-    setTimeout(function () {
+        setTimeout(function () {
 
-        document.getElementById("pantallaCarga").style.display = "none";
+            document.getElementById("pantallaCarga").style.display = "none";
 
-        document.getElementById("pantallaPago").style.display = "flex";
+            document.getElementById("pantallaPago").style.display = "flex";
 
-    }, 2500);
+        }, 2500);
 
-</script>
+    </script>
 
+    <div class="modal-pago" id="modalPago">
+        <div class="modal-contenido">
+            <div class="icono-exito">✓</div>
+
+            <h2>Pago en validación</h2>
+
+            <p>
+                Tu pago está siendo validado. Se te enviará tu factura
+                al correo electrónico o mensaje de texto.
+            </p>
+
+            <button onclick="cerrarConfirmacion()">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function mostrarConfirmacion() {
+            document.getElementById("modalPago").style.display = "flex";
+        }
+
+        function cerrarConfirmacion() {
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
+
 </html>
