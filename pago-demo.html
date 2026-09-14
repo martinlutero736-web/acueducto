@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pago de demostración</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="pantalla-carga" id="pantallaCarga">
+
+        <div class="carga-contenido">
+
+            <img src="logo.png" alt="Logo" class="logo-carga">
+
+            <div class="puntos-carga">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <p>Procesando solicitud...</p>
+
+            <small>transfiriendo a pago</small>
+
+        </div>
+
+    </div>
+
+
+    <div class="pantalla-pago" id="pantallaPago">
+
+        <div class="pago-card">
+
+            <div class="aviso-demo">
+                DATOS DE PAGO
+            </div>
+
+            <h1>Resumen del pago</h1>
+
+            <div class="dato-pago">
+                <span>Entidad seleccionada</span>
+                <strong id="bancoMostrar">---</strong>
+            </div>
+
+            <div class="dato-pago">
+                <span>Valor a pagar</span>
+                <strong id="valorMostrar">$0</strong>
+            </div>
+
+            <div class="separador"></div>
+
+            <h2>Realiza el pago</h2>
+
+            <p class="texto-qr">
+                Escanea el siguiente código QR para realizar el
+                pago de demostración.
+            </p>
+
+            <div class="qr-contenedor">
+
+                <img src="qr.png" alt="Código QR de demostración">
+
+            </div>
+
+            <div class="nota-demo">
+                Este código QR es únicamente para demostración.
+                No corresponde a un pago real.
+            </div>
+
+        </div>
+
+    </div>
+
+
+<script>
+
+    const datosPago = JSON.parse(
+        sessionStorage.getItem("datosPagoDemo")
+    );
+
+    if (datosPago) {
+
+        document.getElementById("bancoMostrar").textContent =
+            datosPago.banco;
+
+        document.getElementById("valorMostrar").textContent =
+            datosPago.total;
+    }
+
+
+    setTimeout(function () {
+
+        document.getElementById("pantallaCarga").style.display = "none";
+
+        document.getElementById("pantallaPago").style.display = "flex";
+
+    }, 2500);
+
+</script>
+
+</body>
+</html>

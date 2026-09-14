@@ -1,0 +1,1081 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #4b5563;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    height: 150px;
+    background: #1265c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 280px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* IMAGEN */
+
+.imagen-principal {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+}
+
+.imagen-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CONTENIDO */
+
+.contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 55px 25px 70px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 55px;
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #4b5563;
+}
+
+p {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+/* BOTONES */
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.botones button {
+    border: none;
+    background: #1265c5;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botones button:hover {
+    background: #0d4f9c;
+    transform: translateY(-2px);
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .encabezado {
+        height: 120px;
+    }
+
+    .logo {
+        max-width: 220px;
+    }
+
+    .imagen-principal {
+        height: 350px;
+    }
+
+    .contenido {
+        padding: 40px 20px 60px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .botones button {
+        width: 100%;
+    }
+}
+
+/* ==============================
+   CONSULTA DE FACTURA
+============================== */
+
+.consulta {
+    max-width: 600px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+.consulta h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: #4b5563;
+    margin-bottom: 30px;
+}
+
+.consulta label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4b5563;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.consulta input,
+.consulta select {
+    width: 100%;
+    height: 55px;
+    padding: 0 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #4b5563;
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+.consulta input:focus,
+.consulta select:focus {
+    border-color: #1265c5;
+    box-shadow: 0 0 0 2px rgba(18, 101, 197, 0.15);
+}
+
+/* BOTÓN CONTINUAR */
+
+.btn-continuar {
+    width: 100%;
+    margin-top: 30px;
+    border: none;
+    background: #1265c5;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-continuar:hover {
+    background: #0d4f9c;
+    transform: translateY(-2px);
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .consulta {
+        width: 100%;
+    }
+
+    .consulta h2 {
+        font-size: 28px;
+    }
+
+    .consulta label {
+        font-size: 17px;
+    }
+
+    .consulta input,
+    .consulta select {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .btn-continuar {
+        width: 100%;
+    }
+}
+
+/* ==============================
+   CAPTCHA
+============================== */
+
+.captcha {
+    margin-top: 25px;
+    padding: 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.captcha-titulo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+.captcha-codigo {
+    width: 180px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: #eeeeee;
+    color: #4b5563;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    user-select: none;
+}
+
+.captcha input {
+    margin-bottom: 10px;
+}
+
+.captcha-nuevo {
+    border: none;
+    background: transparent;
+    color: #1265c5;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.captcha-nuevo:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   BOTÓN CON DOS FLECHAS
+============================== */
+
+.btn-continuar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+    height: 58px;
+    margin-top: 30px;
+    border: none;
+    background: #1265c5;
+    color: white;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-continuar span {
+    line-height: 1;
+}
+
+.btn-continuar:hover {
+    background: #0d4f9c;
+    transform: translateY(-2px);
+}
+/* ==============================
+   INFORMACIÓN ARCHIVO EXCEL
+============================== */
+
+.texto-excel {
+    margin-top: 22px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    color: #4b5563;
+}
+
+.texto-excel label {
+    display: inline;
+    margin: 0;
+    color: #1265c5;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.texto-excel label:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   TABLA DESLIZABLE - RESULTADO DE CONSULTA
+   ========================================= */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 30px 0;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* La tabla mantiene un ancho grande */
+.tabla-factura {
+    width: 1200px;
+    min-width: 1200px;
+}
+
+/* Encabezados */
+.encabezado-tabla {
+    display: grid;
+
+    grid-template-columns:
+        100px
+        160px
+        170px
+        160px
+        180px
+        150px
+        120px
+        150px
+        140px
+        100px;
+
+    min-height: 90px;
+
+    align-items: center;
+
+    border-bottom: 2px solid #dddddd;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    text-align: center;
+
+    color: #111111;
+}
+
+/* Información */
+.fila-factura {
+    display: grid;
+
+    grid-template-columns:
+        100px
+        160px
+        170px
+        160px
+        180px
+        150px
+        120px
+        150px
+        140px
+        100px;
+
+    min-height: 130px;
+
+    align-items: center;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+/* Estado */
+.estado-pendiente {
+    color: #e54848;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Interruptor */
+.interruptor {
+    width: 65px;
+    height: 34px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #1479e8;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.interruptor::after {
+    content: "";
+
+    position: absolute;
+
+    width: 28px;
+    height: 28px;
+
+    top: 3px;
+    right: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+}
+
+/* Barra horizontal */
+.tabla-contenedor::-webkit-scrollbar {
+    height: 10px;
+}
+
+.tabla-contenedor::-webkit-scrollbar-track {
+    background: #eeeeee;
+}
+
+.tabla-contenedor::-webkit-scrollbar-thumb {
+    background: #999999;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   MEDIO DE PAGO
+   ========================================= */
+
+.medio-pago {
+    width: 100%;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.medio-pago h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.medio-pago select {
+    width: 100%;
+    height: 60px;
+
+    padding: 0 20px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 17px;
+    color: #4b5563;
+}
+
+
+/* =========================================
+   TOTAL
+   ========================================= */
+
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 25px;
+    padding: 20px;
+
+    background: #f5f7f9;
+    border-radius: 8px;
+
+    font-size: 20px;
+}
+
+.resumen-total strong {
+    font-size: 24px;
+}
+
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .tabla-contenedor {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .tabla-factura {
+        width: 1200px;
+        min-width: 1200px;
+    }
+
+    .encabezado-tabla,
+    .fila-factura {
+        font-size: 17px;
+    }
+
+    .medio-pago select {
+        font-size: 16px;
+    }
+}
+/* ==========================================
+   RESULTADO - SECCIÓN DE PAGO
+   ========================================== */
+
+.seccion-pago-demo {
+    width: 100%;
+    margin-top: 35px;
+    text-align: left;
+}
+
+
+/* ==========================================
+   TÍTULOS DE LAS SECCIONES
+   ========================================== */
+
+.titulo-seccion {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 32px 5px 25px;
+
+    color: #4b4f55;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+.icono-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    font-size: 21px;
+
+    color: #3f454b;
+}
+
+.datos-pagador {
+    margin-top: 48px;
+}
+
+
+/* ==========================================
+   RECUADROS DE LOS CAMPOS
+   ========================================== */
+
+.campo-pago {
+    width: 100%;
+
+    min-height: 104px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   NOMBRE DEL CAMPO
+   ========================================== */
+
+.etiqueta-campo {
+    display: block;
+
+    padding: 17px 28px 2px;
+
+    color: #858991;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   INPUTS
+   ========================================== */
+
+.campo-pago input {
+    display: block;
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 2px 28px 10px;
+
+    margin: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #44484e;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    box-sizing: border-box;
+}
+
+
+/* Placeholder */
+
+.campo-pago input::placeholder {
+    color: #aeb0b4;
+
+    opacity: 1;
+}
+
+
+/* ==========================================
+   SELECT
+   ========================================== */
+
+.campo-pago select {
+    display: block;
+
+    width: 100%;
+
+    height: 52px;
+
+    padding: 2px 55px 10px 28px;
+
+    margin: 0;
+
+    border: none;
+
+    outline: none;
+
+    background-color: transparent;
+
+    color: #45484d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+/* ==========================================
+   MEDIO DE PAGO
+   ========================================== */
+
+.medio-pago {
+    width: 100%;
+
+    margin-top: 30px;
+
+    text-align: left;
+}
+
+.medio-pago h3 {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 0 0 25px 5px;
+
+    color: #4b4f55;
+
+    font-size: 22px;
+
+    font-weight: 400;
+}
+
+.medio-pago select {
+    width: 100%;
+
+    height: 105px;
+
+    padding: 15px 28px;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #45484d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    outline: none;
+}
+
+
+/* ==========================================
+   MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .seccion-pago-demo {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .titulo-seccion {
+        margin-left: 5px;
+        margin-right: 5px;
+
+        font-size: 21px;
+    }
+
+    .datos-pagador {
+        margin-top: 45px;
+    }
+
+    .campo-pago {
+        min-height: 104px;
+
+        margin-bottom: 20px;
+
+        border-radius: 7px;
+    }
+
+    .etiqueta-campo {
+        padding: 17px 27px 2px;
+
+        font-size: 19px;
+    }
+
+    .campo-pago input {
+        height: 50px;
+
+        padding-left: 27px;
+        padding-right: 27px;
+
+        font-size: 20px;
+    }
+
+    .campo-pago select {
+        height: 52px;
+
+        padding-left: 27px;
+        padding-right: 45px;
+
+        font-size: 20px;
+    }
+
+    .medio-pago h3 {
+        margin-left: 5px;
+
+        font-size: 21px;
+    }
+
+    .medio-pago select {
+        height: 105px;
+
+        padding-left: 27px;
+        padding-right: 40px;
+
+        font-size: 19px;
+    }
+}
+
+/* ==========================================
+   BOTÓN PSE
+   ========================================== */
+
+.boton-pse {
+    width: 100%;
+    margin: 30px 0 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.boton-pse img {
+    width: 180px;
+    max-width: 70%;
+    height: auto;
+    display: inline-block;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.boton-pse:hover img {
+    transform: scale(1.04);
+    opacity: 0.9;
+}
+
+.boton-pse:active img {
+    transform: scale(0.97);
+}
+
+/* ================================
+   PÁGINA DE PAGO DEMO
+================================ */
+
+.pantalla-carga {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f8fc;
+}
+
+.carga-contenido {
+    text-align: center;
+}
+
+.logo-carga {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    animation: parpadeo 1s infinite ease-in-out;
+}
+
+.carga-contenido p {
+    margin: 20px 0 5px;
+    font-size: 19px;
+    color: #333;
+}
+
+.carga-contenido small {
+    color: #777;
+}
+
+.puntos-carga {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 18px;
+}
+
+.puntos-carga span {
+    width: 8px;
+    height: 8px;
+    background: #1479e8;
+    border-radius: 50%;
+    animation: punto 1.2s infinite ease-in-out;
+}
+
+.puntos-carga span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.puntos-carga span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        opacity: .35;
+        transform: scale(.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes punto {
+    0%, 100% {
+        opacity: .3;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+}
+
+
+/* ================================
+   PANTALLA FINAL
+================================ */
+
+.pantalla-pago {
+    min-height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #f4f8fc;
+}
+
+.pago-card {
+    width: 100%;
+    max-width: 560px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .12);
+    text-align: center;
+}
+
+.pago-card .aviso-demo {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #fff3cd;
+    color: #856404;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pago-card h1 {
+    margin: 0 0 25px;
+    font-size: 28px;
+    color: #222;
+}
+
+.dato-pago {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+}
+
+.dato-pago span {
+    color: #777;
+    font-size: 15px;
+}
+
+.dato-pago strong {
+    color: #222;
+    font-size: 16px;
+    text-align: right;
+}
+
+.separador {
+    height: 20px;
+}
+
+.pago-card h2 {
+    margin: 10px 0 10px;
+    color: #1479e8;
+    font-size: 22px;
+}
+
+.texto-qr {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.qr-contenedor {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nota-demo {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 7px;
+    background: #f1f5f9;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   MÓVIL
+================================ */
+
+@media (max-width: 600px) {
+
+    .pago-card {
+        padding: 25px 18px;
+    }
+
+    .pago-card h1 {
+        font-size: 24px;
+    }
+
+    .dato-pago {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .dato-pago strong {
+        text-align: left;
+    }
+
+    .qr-contenedor {
+        width: 230px;
+        height: 230px;
+    }
+}
